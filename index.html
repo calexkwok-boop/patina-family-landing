@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Patina</title>
+<meta name="description" content="Patina — for all the things you wish they knew." />
+<link rel="icon" type="image/png" href="/public/letters-icon.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,700;1,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;1,8..60,400&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --bg: #FBF8F2;
+    --bg-card: #F6FAF4;
+    --bg-elevated: #EBF2E8;
+    --text: #2C3828;
+    --text-2: #5C6B5E;
+    --text-muted: #9AA89C;
+    --border: #CCDAC8;
+    --accent: #4A5E50;
+    --accent-rgb: 74,94,80;
+    --gold: #C8993E;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #17181A;
+      --bg-card: #1E2020;
+      --bg-elevated: #262828;
+      --text: #E8E9E4;
+      --text-2: #A8ACA4;
+      --text-muted: #6B6F68;
+      --border: #2C2F2C;
+      --accent: #5E9868;
+      --accent-rgb: 94,152,104;
+      --gold: #D8B667;
+    }
+  }
+
+  * { box-sizing: border-box; }
+  html, body { height: 100%; }
+  body {
+    margin: 0;
+    font-family: 'Urbanist', sans-serif;
+    background: var(--bg);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23noise)' opacity='0.22'/%3E%3C/svg%3E");
+    color: var(--text);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 32px 20px;
+  }
+
+  main { width: 100%; max-width: 760px; text-align: center; }
+
+  .hairline { width: 30px; height: 1px; background: rgba(200,153,62,0.45); margin: 0 auto 16px; }
+  h1 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: clamp(38px, 7vw, 54px);
+    color: var(--gold);
+    margin: 0 0 14px;
+    text-wrap: balance;
+  }
+  .tagline {
+    font-family: 'Source Serif 4', serif;
+    font-style: italic;
+    font-size: clamp(15px, 2.4vw, 18px);
+    color: var(--text-2);
+    margin: 0 0 56px;
+    line-height: 1.6;
+  }
+
+  .apps {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 22px;
+  }
+  @media (max-width: 560px) {
+    .apps { grid-template-columns: 1fr; max-width: 320px; margin: 0 auto; }
+  }
+
+  .app-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    padding: 32px 24px 28px;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 22px;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+  }
+  .app-card:hover, .app-card:focus-visible {
+    transform: translateY(-4px);
+    box-shadow: 0 14px 30px rgba(44,56,40,0.14);
+    border-color: rgba(var(--accent-rgb),0.35);
+    outline: none;
+  }
+  .app-card img {
+    width: 108px;
+    height: 108px;
+    border-radius: 26px;
+    box-shadow: 0 6px 18px rgba(44,56,40,0.22);
+  }
+  .app-card .name {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 20px;
+    color: var(--accent);
+    margin: 0;
+  }
+  .app-card .desc {
+    font-size: 13.5px;
+    color: var(--text-muted);
+    line-height: 1.55;
+    margin: 0;
+    max-width: 26ch;
+  }
+  .app-card .go {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--accent);
+    letter-spacing: 0.3px;
+    margin-top: 4px;
+  }
+  .app-card .go svg { width: 13px; height: 13px; transition: transform 0.18s ease; }
+  .app-card:hover .go svg { transform: translateX(3px); }
+
+  footer {
+    margin-top: 56px;
+    font-size: 12px;
+    color: var(--text-muted);
+  }
+</style>
+</head>
+<body>
+  <main>
+    <div class="hairline"></div>
+    <h1>Patina</h1>
+    <p class="tagline">For all the days worth planning, and all the days worth remembering.</p>
+
+    <div class="apps">
+      <a class="app-card" href="/letters">
+        <img src="/public/letters-icon.png" alt="Patina Letters icon" />
+        <p class="name">Letters</p>
+        <p class="desc">They grow up so fast. Tell them how much you love them.</p>
+        <span class="go">Open Letters
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+        </span>
+      </a>
+
+      <a class="app-card" href="/calendar">
+        <img src="/public/calendar-icon.png" alt="Patina Calendar icon" />
+        <p class="name">Calendar</p>
+        <p class="desc">Life is beautiful. Planning it should be too.</p>
+        <span class="go">Open Calendar
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+        </span>
+      </a>
+    </div>
+
+    <footer>&copy; Patina</footer>
+  </main>
+</body>
+</html>

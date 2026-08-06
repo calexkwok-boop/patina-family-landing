@@ -1,0 +1,11 @@
+{
+  "cleanUrls": true,
+  "rewrites": [
+    { "source": "/letters", "destination": "https://app.patinafamily.com/letters" },
+    { "source": "/letters/", "destination": "https://app.patinafamily.com/letters/" },
+    { "source": "/letters/:path*", "destination": "https://app.patinafamily.com/letters/:path*" },
+    { "source": "/calendar", "destination": "https://patina-calendar-alpha.vercel.app/calendar" },
+    { "source": "/calendar/", "destination": "https://patina-calendar-alpha.vercel.app/calendar/" },
+    { "source": "/calendar/:path*", "destination": "https://patina-calendar-alpha.vercel.app/calendar/:path*" }
+  ]
+}
