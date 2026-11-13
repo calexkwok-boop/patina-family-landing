@@ -36,7 +36,7 @@
     padding: 32px 20px;
   }
 
-  main { width: 100%; max-width: 860px; text-align: center; }
+  main { width: 100%; max-width: 760px; text-align: center; }
 
   .hairline { width: 30px; height: 1px; background: rgba(200,153,62,0.45); margin: 0 auto 16px; }
   h1 {
@@ -58,10 +58,10 @@
 
   .apps {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr 1fr;
     gap: 22px;
   }
-  @media (max-width: 720px) {
+  @media (max-width: 560px) {
     .apps { grid-template-columns: 1fr; max-width: 320px; margin: 0 auto; }
   }
 
@@ -121,13 +121,6 @@
     color: var(--accent);
     margin: 0;
   }
-  .app-card .desc {
-    font-size: 13.5px;
-    color: var(--text-muted);
-    line-height: 1.55;
-    margin: 0;
-    max-width: 26ch;
-  }
   .app-card .go {
     display: inline-flex;
     align-items: center;
@@ -158,17 +151,7 @@
       <a class="app-card" href="/letters">
         <img src="/assets/letters-icon.png" alt="Patina Letters icon" />
         <p class="name">Letters</p>
-        <p class="desc">They grow up so fast. Tell them how much you love them.</p>
         <span class="go">Open Letters
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
-        </span>
-      </a>
-
-      <a class="app-card" href="/boards">
-        <img src="/assets/calendar-icon.png" alt="Patina Calendar icon" />
-        <p class="name">Calendar</p>
-        <p class="desc">Life is beautiful. Planning should be too.</p>
-        <span class="go">Open Calendar
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
         </span>
       </a>
@@ -176,7 +159,6 @@
       <a class="app-card" href="/boards/?boards=1">
         <span class="icon-box"><img src="/assets/boards-icon-mark.png" alt="Patina Boards icon" /></span>
         <p class="name">Boards</p>
-        <p class="desc">Trivia night, your way. Build a board, gather the family.</p>
         <span class="go">Open Boards
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
         </span>
